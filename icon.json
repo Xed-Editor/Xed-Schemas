@@ -3,7 +3,7 @@
   "title": "Xed-Editor icon pack",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "icons", "repository"],
+  "required": ["id", "name", "author", "icons", "repository", "type"],
   "properties": {
     "$schema": {
       "type": "string",
@@ -30,7 +30,7 @@
       "description": "Optional human-readable description of the icon pack"
     },
     "author": {
-      "$ref": "#/$defs/ExtensionAuthor"
+      "$ref": "#/$defs/IconPackAuthor"
     },
     "applyTint": {
       "type": "boolean",
@@ -67,12 +67,12 @@
     },
     "type": {
       "type": "string",
-      "enum": ["extension", "theme", "icon_pack"],
+      "enum": ["icon_pack"],
       "description": "Package type (used in unified .xed format)"
     }
   },
   "$defs": {
-    "ExtensionAuthor": {
+    "IconPackAuthor": {
       "type": "object",
       "additionalProperties": false,
       "required": ["displayName"],

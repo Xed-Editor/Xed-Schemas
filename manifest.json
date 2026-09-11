@@ -1,28 +1,23 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Xed-Editor extension",
+  "title": "Xed-Editor package manifest",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "mainClass", "author", "repository", "type"],
+  "required": ["id", "name", "author", "repository", "type"],
   "properties": {
     "$schema": {
       "type": "string",
-      "description": "Xed-Editor extension schema URL. This property enables theme validation and auto-completion"
+      "description": "Xed-Editor package schema URL. This property enables theme validation and auto-completion"
     },
     "id": {
       "type": "string",
       "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$",
-      "description": "Unique identifier of the extension (package name)"
+      "description": "Unique identifier of the Xed-Editor package (package name)"
     },
     "name": {
       "type": "string",
-      "description": "Human-readable extension name",
+      "description": "Human-readable package name",
       "minLength": 1
-    },
-    "mainClass": {
-      "type": "string",
-      "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+\\.[A-Z][a-zA-Z0-9_]*$",
-      "description": "Fully qualified entry class name"
     },
     "version": {
       "type": "string",
@@ -33,10 +28,10 @@
     "description": {
       "type": ["string", "null"],
       "default": null,
-      "description": "Optional human-readable description of the extension"
+      "description": "Optional human-readable description of the package"
     },
     "author": {
-      "$ref": "#/$defs/ExtensionAuthor"
+      "$ref": "#/$defs/PackageAuthor"
     },
     "minAppVersion": {
       "type": ["integer", "null"],
@@ -63,19 +58,14 @@
       "default": [],
       "description": "Tags for categorization and discovery"
     },
-    "hasSettings": {
-      "type": "boolean",
-      "default": false,
-      "description": "Whether this extension exposes a settings UI"
-    },
     "type": {
       "type": "string",
-      "enum": ["extension"],
-      "description": "Package type (used in unified .xed format)"
+      "enum": ["extension", "theme", "icon_pack"],
+      "description": "Package type"
     }
   },
   "$defs": {
-    "ExtensionAuthor": {
+    "PackageAuthor": {
       "type": "object",
       "additionalProperties": false,
       "required": ["displayName"],

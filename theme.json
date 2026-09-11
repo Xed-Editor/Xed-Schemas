@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Xed-Editor theme",
-  "description": "Color palettes for a Xed-Editor theme. Package metadata (id, name, version, author, minAppVersion, inheritBase, etc.) belongs in manifest.json, not here",
+  "description": "Color palettes for a Xed-Editor theme. Package metadata (id, name, version, author, minAppVersion, inheritBase, etc.) belongs in manifest.json, not here.",
   "type": "object",
   "properties": {
     "$schema": {
