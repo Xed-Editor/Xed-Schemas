@@ -11,6 +11,7 @@
     },
     "id": {
       "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$",
       "description": "Unique identifier of the icon pack"
     },
     "name": {
