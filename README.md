@@ -5,6 +5,8 @@ It includes the following JSON schemas:
 
 - https://raw.githubusercontent.com/Xed-Editor/Xed-Schemas/main/extension.json
   > Validation for extension `manifest.json` files
+- https://raw.githubusercontent.com/Xed-Editor/Xed-Schemas/main/theme-manifest.json
+  > Validation for theme `manifest.json` files
 - https://raw.githubusercontent.com/Xed-Editor/Xed-Schemas/main/theme.json
   > Validation for theme `theme.json` files
 - https://raw.githubusercontent.com/Xed-Editor/Xed-Schemas/main/icon.json
